@@ -1,4 +1,4 @@
-const SimpleButton = ({children, ...props}: React.ButtonHTMLAttributes<HTMLButtonElement>) => {
+const SimpleButton = ({ children, ...props }: React.ButtonHTMLAttributes<HTMLButtonElement>) => {
   return (
     <button {...props}>
       {children}
