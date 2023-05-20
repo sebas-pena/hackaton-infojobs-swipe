@@ -1,3 +1,9 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "next/core-web-vitals",
+    "./node_modules/ts-standard-preact/.eslintrc.json"
+  ],
+  "rules": {
+    "react/react-in-jsx-scope": "off"
+  }
 }
