@@ -1,4 +1,4 @@
-import { InfoJobsDetailedOfferResponse, InfoJobsOfferResponse } from '../types'
+import { InfoJobsDetailedOfferResponse } from '../types'
 
 async function api<T> (url: string, config?: RequestInit): Promise<T> {
   return await fetch(url, config)
@@ -22,7 +22,11 @@ export const clientGetJobOffers = async ({
   if (countries.length > 0) {
     url += `&countries=${countries.join(',')}`
   }
-  return await api<InfoJobsOfferResponse>(url)
+  return await api<{
+    items: string[]
+    totalResults: number
+    totalPages: number
+  }>(url)
 }
 
 export const clientGetJobOfferDetails = async (id: string) => {

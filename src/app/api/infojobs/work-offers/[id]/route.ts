@@ -3,12 +3,13 @@ import { NextRequest, NextResponse } from 'next/server'
 
 export const GET = async (
   req: NextRequest,
-  params: { id: string }
+  params: { params: { id: string } }
 ) => {
-  const { id } = params
+  console.log(params)
+  const { id } = params.params
   try {
-    const response = getJobOfferDetails(id)
-    return NextResponse.json(await response)
+    const response = await getJobOfferDetails(id)
+    return NextResponse.json(response)
   } catch (e) {
     console.log(e)
     return NextResponse.json({ error: e }, { status: 500 })

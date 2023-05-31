@@ -11,7 +11,13 @@ export const GET = async (
     page: parseInt(page)
   })
     .then(response => {
-      return NextResponse.json(response)
+      const offersIds = response.items.map(offer => offer.id)
+      return NextResponse.json(
+        {
+          items: offersIds,
+          totalResults: response.totalResults,
+          totalPages: response.totalPages
+        })
     })
     .catch(error => {
       console.error(error)

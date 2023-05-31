@@ -9,7 +9,7 @@ import { loggedAsWorker } from './features/app/appSlice'
 import { saveSettings } from './features/worker-settings/workerSettingsSlice'
 
 const Initializer = ({ children }: { children: React.ReactNode }) => {
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(true)
   const dispatch = useDispatch()
   const pathname = usePathname()
 

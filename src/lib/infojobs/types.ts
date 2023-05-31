@@ -126,6 +126,10 @@ interface Salary {
   amountValue: string
 }
 
+interface Skill {
+  skill: string
+}
+
 export interface InfoJobsDetailedOfferResponse {
   title: string
   id: string
@@ -164,14 +168,14 @@ export interface InfoJobsDetailedOfferResponse {
   studying: boolean
   showPay: boolean
   multiDictionaryItem: boolean
-  maxPay: Salary
-  minPay: Salary
+  maxPay?: Salary
+  minPay?: Salary
   schedule: string
   jobLevel: DictionaryItem
   staffInCharge: DictionaryItem
   hasKillerQuestions: number
   hasOpenQuestions: number
   fiscalAddress: string
-  skillsList: any[]
+  skillsList: Skill[]
   salaryDescription: string
 }
