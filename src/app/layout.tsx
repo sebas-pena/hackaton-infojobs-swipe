@@ -44,6 +44,8 @@ export default function RootLayout ({
         <meta property='og:title' content={metadata.title} />
         <meta property='og:description' content={metadata.description} />
         <meta property='og:image' content='/img/og-image.jpg' />
+        <meta property='og:type' content='website' />
+        <meta name='twitter:card' content='summary' />
         <meta property='og:url' content='https://hackaton-infojobs-swipe.vercel.app/' />
         <meta name='msapplication-TileColor' content='#ffffff' />
         <meta name='theme-color' content='#ffffff' />
