@@ -10,7 +10,7 @@ const Header = () => {
   const app = useAppSelector((state) => state.app)
   const username = (user != null) ? `${user.name} ${user.surname1}` : 'Invitado'
   // eslint-disable-next-line @typescript-eslint/prefer-optional-chain
-  const photo = (user != null && user?.hasPhoto) ? user.photo : '/img/default-user.png'
+  const photo = (user != null && user.hasPhoto) ? user.photo : '/img/default-user.png'
   const isUserLogged = app.loggedIn && !app.guest
 
   return (
