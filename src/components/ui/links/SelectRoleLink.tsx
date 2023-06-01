@@ -9,9 +9,9 @@ const SelectRoleLink = ({ worker, href }: { worker: boolean, href: string }) => 
 
   if (app.loggedIn) {
     if (app.guest) {
-      href = '/worker/offers'
+      href = worker ? '/worker/offers' : '/employer'
     } else {
-      href = 'worker/settings'
+      href = worker ? '/worker' : '/employer'
     }
   }
 
